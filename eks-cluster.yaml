@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eks-mgmt-cluster
+  region: eu-west-1
+
+managedNodeGroups:
+  - name: eks-mgmt-node-group
+    instanceTypes: [ "t3.medium" ]
+    desiredCapacity: 2
+    volumeSize: 20
+    spot: false
+
